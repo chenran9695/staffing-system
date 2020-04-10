@@ -70,10 +70,5 @@ public class EmployeeDao {
     public void deleteEmployeeById(Integer id){
         employees.remove(id);
     }
-    /**
-     * 修改员工信息
-     */
-    public void updateEmployee(Employee employee){
 
-    }
 }

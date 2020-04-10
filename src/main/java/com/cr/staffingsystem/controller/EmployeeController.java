@@ -35,7 +35,7 @@ public class EmployeeController {
 
     @PostMapping("/employee")
     public String addEmployee(Employee employee){
-        System.out.println("add=>"+employee.toString());
+       // System.out.println("add=>"+employee.toString());
         employeeDao.addEmployee(employee);
         return "redirect:/employees";
     }
@@ -65,6 +65,12 @@ public class EmployeeController {
     @PostMapping("/employee/update")
     public String updateEmployee(Employee employee){
         employeeDao.addEmployee(employee);
+        return "redirect:/employees";
+    }
+
+    @GetMapping("/employee/del/{id}")
+    public String deleteEmployee(@PathVariable Integer id){
+        employeeDao.deleteEmployeeById(id);
         return "redirect:/employees";
     }
 }

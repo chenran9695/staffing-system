@@ -8,7 +8,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>添加员工</title>
+		<title>员工管理</title>
 		<!-- Bootstrap core CSS -->
 		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
 
@@ -49,44 +49,8 @@
                 <div th:replace="~{commons/commons::sidebar(active='list.html')}"></div>
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-					<h2>添加员工</h2>
-					<div class="table-responsive">
-						<form th:action="@{/employee}" th:method="post">
-							<!--用户名-->
-							<div class="form-group">
-								<label for="lastName">用户名</label>
-								<input type="text" class="form-control" id="lastName" name="lastName" placeholder="如：陈然">
-							</div>
-							<!--邮箱-->
-							<div class="form-group">
-								<label for="email">邮箱</label>
-								<input type="email" class="form-control" id="email" name="email" placeholder="如：123456@qq.com">
-							</div>
-							<!--性别-->
-							<div class="form-group">
-								<label class="radio-inline">
-									<input type="radio" name="gender" id="gender1" value="1"> 男
-								</label>
-								<label class="radio-inline">
-									<input type="radio" name="gender" id="gender2" value="0"> 女
-								</label>
-							</div>
-							<!--部门-->
-							<div class="form-group">
-								<label>部门</label>
-								<select class="form-control" name="department.id">
-									<option th:each="dept:${departments}" th:text="${dept.getDepartmentName()}" th:value="${dept.getId()}"></option>
-								</select>
-							</div>
-							<!--生日-->
-							<div class="form-group">
-								<label for="birth">生日</label>
-								<input type="text" class="form-control" id="birth" name="birth" placeholder="如：1997-12-12">
-							</div>
-							<!--“提交”按钮-->
-							<button type="submit" class="btn btn-sm btn-success">添加</button>
-						</form>
-					</div>
+					<h1 class="alert-danger">404警告⚠，你跑到火星去了！</h1>
+					<h1 class="alert-danger"></h1>
 				</main>
 			</div>
 		</div>
